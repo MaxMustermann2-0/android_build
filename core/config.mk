@@ -21,6 +21,9 @@ $(error $(1))
 endef
 endif
 
+# Build with Java 8 
+EXPERIMENTAL_USE_JAVA8 := true
+
 # Only use ANDROID_BUILD_SHELL to wrap around bash.
 # DO NOT use other shells such as zsh.
 ifdef ANDROID_BUILD_SHELL
@@ -38,7 +41,6 @@ space := $(empty) $(empty)
 comma := ,
 # Note that make will eat the newline just before endef.
 define newline
-
 
 endef
 # Unfortunately you can't simply define backslash as \ or \\.
